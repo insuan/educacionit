@@ -1,0 +1,27 @@
+SELECT        Fichadas.Controlador, Fichadas.Tarjeta, Fichadas.Capturada, Fichadas.Fecha, Fichadas.TReal, Fichadas.IdPerso, Personas.Apellido, Personas.Nombre, Personas.Legajo
+FROM            Fichadas INNER JOIN
+                         Personas ON Fichadas.Tarjeta = Personas.Tarjeta
+WHERE        (Fichadas.Controlador = 9) AND (Fichadas.Fecha BETWEEN '31/01/2024' AND '02/02/2024') AND (Fichadas.Tarjeta <> 0)
+ORDER BY Fichadas.Capturada DESC
+
+const jugadores = ["Juan", "Nicolas", "Diego"];
+
+// const resultado = jugadoresDeTenis.findIndex(jugador => jugador.nombre === "Marin Cilic"); --> Nos devuelve el indice del objeto, sino existe nos devuelve un -1
+
+// const resultado = jugadoresDeTenis.some(jugador => jugador.nombre === "Marin Cili") --> Nos devuelve true o false
+// const resultado = jugadores.includes("Juan") Nos devuelve true o false
+
+// const resultado = jugadoresDeTenis.find(jugador => jugador.nombre === "Alexander Bublik") --> Si lo encuentra te trae todo el objeto , sino te devuelve undefined
+
+// const resultado = jugadoresDeTenis.filter(jugador => jugador.pais === "Italia") --> Te crea un nuevo arreglo con la condicion solicitada
+
+console.log(resultado)
+
+
+jugadoresDeTenis.forEach((jugador,i) => {
+    // console.log(`${i} -- ${jugador.nombre}`)
+})
+
+
+
+Seb@0002
